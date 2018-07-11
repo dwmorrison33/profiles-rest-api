@@ -10,7 +10,6 @@ class UserProfileSerializer(serializers.ModelSerializer):
         model = models.UserProfile
         fields = ('id', 'email', 'name', 'last_login', 'password')
         extra_kwargs = {
-            'last_login': {'read_only': True},
             'password': {'write_only': True}
         }
 
