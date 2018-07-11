@@ -4,7 +4,7 @@ from . import models
 
 
 class UserProfileSerializer(serializers.ModelSerializer):
-    """A serializer for our profile object."""
+    """A serializer for our user profile objects."""
 
     class Meta:
         model = models.UserProfile
@@ -24,4 +24,5 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
         user.set_password(validated_data['password'])
         user.save()
+
         return user
